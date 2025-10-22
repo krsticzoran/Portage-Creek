@@ -3,6 +3,15 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+ 
+}
+
+@theme {
+ --color-primary-dark: #15162F;
+  --color-primary-blue: #0046FF;
+  --color-muted-100: #F3F3F3;
+  --color-soft-blue-100: #F0F4FF;
+  --color-muted-gray: #666666;
 }
 
 @theme inline {
