@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "../components/layout/Header";
 
 const switzer = localFont({
   src: [
@@ -38,8 +39,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${switzer.variable} antialiased font-switzer`}
+        className={`${switzer.variable} antialiased font-switzer relative`}
       >
+        <Header />
         {children}
       </body>
     </html>

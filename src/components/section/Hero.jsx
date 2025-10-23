@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Image from "next/image";
 import Container from "../layout/container";
 import Badge from "../ui/Badge";
@@ -56,7 +55,8 @@ export default function Hero() {
       </div>
 
       <div className="relative w-[616px] flex  items-end justify-center gap-4">
-        <div className="absolute top-0 left-0 right-0 h-[69px] w-[616px] bg-gradient-to-b from-transparent to-[#011F75] pointer-events-none z-10"></div>
+<div className="absolute top-0 left-0 h-[69px] w-[616px] bg-gradient-to-b from-[#000818] to-transparent pointer-events-none z-10"></div>
+
         <div className="absolute bottom-0 left-0 w-[616px] h-[69px] bg-gradient-to-b from-transparent to-[#001F75] pointer-events-none z-10"></div>
          <div className="w-1/2 flex flex-col gap-[14px]">
         <div className="w-full">
