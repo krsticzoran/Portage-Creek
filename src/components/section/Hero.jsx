@@ -7,11 +7,11 @@ import SecondaryButton from "../ui/SecondaryButton";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen relative flex items-center justify-center">
+    <section className="h-[920px] relative flex items-center justify-center">
        {/* Background image */}
       <div
         className="absolute inset-0 -z-10 bg-cover bg-center"
-        style={{ backgroundImage: "url('home/hero/background.webp')" }}
+        style={{ backgroundImage: "url('/home/hero/background.webp')" }}
         aria-hidden
       />
     <Container className="flex items-center justify-between ">
@@ -55,7 +55,35 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="max-w-[616px]">s</div>
+      <div className="relative w-[616px] flex  items-end justify-center gap-4">
+        <div className="absolute top-0 left-0 right-0 h-[69px] w-[616px] bg-gradient-to-b from-transparent to-[#011F75] pointer-events-none z-10"></div>
+        <div className="absolute bottom-0 left-0 w-[616px] h-[69px] bg-gradient-to-b from-transparent to-[#001F75] pointer-events-none z-10"></div>
+         <div className="w-1/2 flex flex-col gap-[14px]">
+        <div className="w-full">
+          <Image src="/home/hero/hero1.webp" alt="Hero 1" width={301} height={308} className="object-contain w-full h-auto" />
+        </div>
+        <div className="w-full">
+          <Image src="/home/hero/hero2.webp" alt="Hero 2" width={301} height={308} className="object-contain w-full h-auto" />
+        </div>
+        <div className="w-full">
+          <Image src="/home/hero/hero3.webp" alt="Hero 3" width={301} height={308} className="object-contain w-full h-auto" />
+        </div>
+        </div>
+          <div className="w-1/2 flex flex-col gap-[14px]">
+        <div className="w-full">
+          <Image src="/home/hero/hero4.webp" alt="Hero 4" width={301} height={198} className="object-contain w-full h-auto" />
+        </div>
+        <div className="w-full">
+          <Image src="/home/hero/hero5.webp" alt="Hero 5" width={301} height={308} className="object-contain w-full h-auto" />
+        </div>
+        <div className="w-full">
+          <Image src="/home/hero/hero6.webp" alt="Hero 6" width={301} height={308} className="object-contain w-full h-auto" />
+        </div>
+         <div className="w-full">
+          <Image src="/home/hero/hero7.webp" alt="Hero 7" width={301} height={64} className="object-contain w-full h-auto" />
+        </div>
+        </div>
+      </div>
     </Container>
     </section>
   );
