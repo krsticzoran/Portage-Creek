@@ -9,7 +9,7 @@ export default function Header() {
     <header
       className="fixed top-[34px] left-0 flex justify-center bg-transparent  z-50 w-full  transition-colors duration-300"
     >
-      <div className="w-[1348px] -ml-12 pl-12 flex bg-white  h-[70px] rounded-[72px] ">
+      <div className="w-[1348px] -ml-12 pl-12 flex bg-white h-[70px] rounded-[72px] border border-[#0046FF0F] shadow-[0_4px_39.4px_0_#00000017]">
         <Container className="flex items-center justify-between py-6">
           <div className="flex items-center gap-[14px]">
             <Link href="/">
