@@ -17,7 +17,7 @@ export default function Hero() {
      <div className="mt-[104px] h-full flex items-center">
       <div className="max-w-[532px]  flex flex-col text-white gap-[92px]">
         <div className="flex flex-col gap-[26px]">
-          <Badge>Available For Project</Badge>
+          <Badge dot>Available For Project</Badge>
           <h1 className="font-semibold text-[64px] leading-[110%]">Custom Websites Built for Speed & Precision.</h1>
           <p className="font-medium text-[32px] leading-[110%]">CUSTOM DESIGN. CUSTOM CODE.</p>
           <p className="font-normal text-[18px] leading-[140%]">We design and develop fast, responsive, and handcrafted websites that help Canadian small businesses and academics grow with confidence.</p>
