@@ -13,9 +13,9 @@ export default function Hero() {
         style={{ backgroundImage: "url('/home/hero/background.webp')" }}
         aria-hidden
       />
-    <Container className="flex items-center justify-between ">
-     
-      <div className="max-w-[532px] mt-[104px]  flex flex-col text-white gap-[92px]">
+    <Container className="flex items-center justify-between h-full">
+     <div className="mt-[104px] h-full flex items-center">
+      <div className="max-w-[532px]  flex flex-col text-white gap-[92px]">
         <div className="flex flex-col gap-[26px]">
           <Badge>Available For Project</Badge>
           <h1 className="font-semibold text-[64px] leading-[110%]">Custom Websites Built for Speed & Precision.</h1>
@@ -26,6 +26,7 @@ export default function Hero() {
 
             <SecondaryButton text="About us" href="#" />
           </div>
+       
         </div>
         <div className="flex items-center gap-4 h-[47px]">
          <div className="relative w-full  sm:max-w-[132px] aspect-[132/47]  overflow-hidden">
@@ -53,7 +54,7 @@ export default function Hero() {
 </div>
         </div>
       </div>
-
+ </div>
       <div className="relative w-[616px] flex  items-end justify-center gap-4">
 <div className="absolute top-0 left-0 h-[69px] w-[616px] bg-gradient-to-b from-[#000818] to-transparent pointer-events-none z-10"></div>
 
