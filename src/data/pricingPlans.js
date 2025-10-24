@@ -39,7 +39,7 @@ const plans = [
     id: 3,
     name: "Subscription Plan",
     price: "$3125",
-    cadence: "contact",
+    cadence: "/month",
     description: "Clients who want ongoing updates and care",
     features: [
       { label: "Monthly maintenance, backups & security updates", included: true },
