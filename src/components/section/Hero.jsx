@@ -48,9 +48,9 @@ export default function Hero() {
       ))}
     </div>
     {/* Rating */}
-    <span >4.9/5.0</span>
+    <span className="text-sm leading-[16px]" >4.9/5.0</span>
   </div>
-  <h6 >Trusted by 10,840 Designers</h6>
+  <h6 className="text-sm leading-[16px]" >Trusted by 10,840 Designers</h6>
 </div>
         </div>
       </div>
