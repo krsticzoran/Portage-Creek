@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
-export default function PrimaryButton({ text = "Get Started", href = "#", variant = "default", className = "" }) {
+export default function PrimaryButton({ text = "Get Started", href = "#", variant = "default", className = "", icon=false }) {
   const base = "inline-flex items-center gap-[10.11px] rounded-[42.45px] px-[24.25px] py-[14.15px] text-[15.16px] leading-[120%] capitalize transition-colors duration-300";
 
   const variants = {
@@ -11,7 +12,6 @@ export default function PrimaryButton({ text = "Get Started", href = "#", varian
   };
 
   const outer = `flex group cursor-pointer ${className}`;
-  // circle/icon styles for variants
   const circleClass =
     variant === "blue"
       ? "bg-primary-blue text-white group-hover:bg-primary-dark"
@@ -21,8 +21,8 @@ export default function PrimaryButton({ text = "Get Started", href = "#", varian
 
   return (
     <div className={outer}>
-      <Link href={href} className={`${variants[variant] ?? variants.default}`}>
-        {text}
+      <Link href={href} className={`${variants[variant] ?? variants.default} flex items-center gap-4`}>
+       {icon && <Image src="/call-icon.png" width={18.55} height={12.98} alt="Call Icon" />} <p>{text}</p>
       </Link>
 
       <div className={`rounded-full h-[46.49px] w-[46.49px] inline-flex items-center justify-center transition-colors duration-300 ${circleClass}`}>
