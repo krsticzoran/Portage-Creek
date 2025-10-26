@@ -5,6 +5,7 @@ import Pricing from "@/components/section/Pricing";
 import About from "@/components/section/About";
 import HowWeWork from "@/components/section/HowWeWork";
 import WhatOurClientsSay from "@/components/section/WhatOurClientsSay";
+import YourVision from "@/components/section/YourVision";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <About />
       <HowWeWork />
       <WhatOurClientsSay />
+      <YourVision />
     </>
   );
 }
