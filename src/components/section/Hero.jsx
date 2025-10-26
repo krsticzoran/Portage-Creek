@@ -27,9 +27,9 @@ export default function Hero() {
                 small businesses and academics grow with confidence.
               </p>
               <div className="flex gap-3">
-                <PrimaryButton text="Get Started" href="#" />
+                <PrimaryButton text="Get Started" href="/contact" />
 
-                <SecondaryButton text="About us" href="#" />
+                <SecondaryButton text="About us" href="/about-us" />
               </div>
             </div>
             <div className="flex items-center gap-4 h-[47px]">
