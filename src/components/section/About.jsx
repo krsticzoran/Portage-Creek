@@ -22,8 +22,8 @@ export default function About() {
               our work embodies clarity, adaptability, and momentum.
             </p>
             <div className="flex gap-3">
-              <PrimaryButton text="Schedule A Call" href="#" variant="blue" icon={true} />
-              <SecondaryButton text="Explore Subscription" href="#" variant="outline" />
+              <PrimaryButton text="Schedule A Call" href="/contact" variant="blue" icon={true} />
+              <SecondaryButton text="Explore Subscription" href="/pricing" variant="outline" />
             </div>
           </div>
           <div>
@@ -35,18 +35,19 @@ export default function About() {
             />
           </div>
         </div>
-        <div className="grid grid-cols-4 gap-2.5 p-2.5 rounded-[10px] bg-[#F6F6F6]">
+        <div className="grid grid-cols-3 gap-4 p-2.5 rounded-[10px] bg-[#F6F6F6]">
           {aboutCards.map((card) => (
             <div
               key={card.id}
-              className="bg-white shadow-[0px_4px_4px_0px_#00000014] rounded-[13px] h-[188px] p-8 flex flex-col justify-between"
+              className="bg-white shadow-[0px_4px_4px_0px_#00000014] rounded-[13px] h-[210px] p-8 flex flex-col justify-between"
             >
+                <div>
               <div className="flex justify-between">
                 <p className="font-semibold text-[52px] leading-[110%] tracking-[0]">
                   {card.value}
                 </p>
                 <div className="flex gap-[6.9px] justify-center items-center">
-                  {Array.from({ length: 4 }).map((_, i) => (
+                  {Array.from({ length: 3 }).map((_, i) => (
                     <div
                       key={i}
                       className={`${
@@ -55,6 +56,8 @@ export default function About() {
                     />
                   ))}
                 </div>
+              </div>
+              <p className="font-semibold text-[15px] leading-[120%] tracking-[0]">{card.subheading}</p>
               </div>
               <p className="font-medium text-[15px] leading-[140%] tracking-[0]">
                 {card.description}

@@ -1,3 +1,5 @@
+'use client'
+import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image'
 import Container from '../layout/container'
 import Badge from '../ui/Badge'
@@ -5,11 +7,23 @@ import PrimaryButton from '../ui/PrimaryButton'
 import plans from '../../data/pricingPlans'
 
 export default function Pricing() {
+  const defaultActive = plans.find((p) => p.id === 2)?.id || plans[0]?.id
+  const [active, setActive] = useState(defaultActive)
+  const hoverTimeout = useRef(null)
+
+  useEffect(() => {
+    return () => {
+      if (hoverTimeout.current) clearTimeout(hoverTimeout.current)
+    }
+  }, [])
+
+  const accentBg = '/home/hero/background.webp'
+
   return (
     <section className="py-[120px] bg-[#F3F3F3]">
       <Container className="flex flex-col gap-[72px]">
         <div className="flex flex-col items-center gap-[26px]">
-          <Badge>Subscription Plan</Badge>
+          <Badge>Pricing</Badge>
           <h2 className="max-w-[748px] text-primary-dark font-semibold text-[60px] leading-[1.1] tracking-[0em] text-center">
             Flexible Pricing for Every Stage of Growth
           </h2>
@@ -20,126 +34,151 @@ export default function Pricing() {
           </p>
         </div>
         <div className="flex gap-5 h-full">
-          {plans.map((plan) => (
-            <div
-              key={plan.id}
-              className="relative w-1/3 rounded-[12px] bg-white flex flex-col gap-[24px] px-6 py-8 "
-              style={
-                plan.id === 2
-                  ? {
-                      backgroundImage: "url('/home/hero/background.webp')",
-                      backgroundColor: 'rgba(0,70,255,0.62)',
-                    }
-                  : {}
-              }
-            >
-              {plan.id === 2 && (
+          {plans.map((plan) => {
+            const isActive = active === plan.id
+
+            return (
+              <div
+                key={plan.id}
+                onMouseEnter={() => {
+                  if (hoverTimeout.current) {
+                    clearTimeout(hoverTimeout.current)
+                    hoverTimeout.current = null
+                  }
+                  setActive(plan.id)
+                }}
+                onMouseLeave={() => {
+                  if (hoverTimeout.current) clearTimeout(hoverTimeout.current)
+                  hoverTimeout.current = setTimeout(() => {
+                    setActive(defaultActive)
+                    hoverTimeout.current = null
+                  }, 120)
+                }}
+                onFocus={() => {
+                  if (hoverTimeout.current) {
+                    clearTimeout(hoverTimeout.current)
+                    hoverTimeout.current = null
+                  }
+                  setActive(plan.id)
+                }}
+                onBlur={() => {
+                  if (hoverTimeout.current) clearTimeout(hoverTimeout.current)
+                  hoverTimeout.current = setTimeout(() => {
+                    setActive(defaultActive)
+                    hoverTimeout.current = null
+                  }, 120)
+                }}
+                className={`relative w-1/3 rounded-[12px] flex flex-col gap-[24px] px-6 py-8 overflow-hidden ${
+                  isActive ? 'text-white' : 'bg-white text-primary-dark'
+                }`}
+              >
+                {/* background image + blue overlay (fade) */}
                 <div
-                  className="absolute rounded-[12px] inset-0 z-[5] pointer-events-none overflow-hidden"
-                  style={{ backgroundColor: 'rgba(0,70,255,0.62)' }}
+                  className="absolute inset-0 z-0 bg-cover bg-center transition-opacity duration-300"
+                  style={{ backgroundImage: `url('${accentBg}')`, opacity: isActive ? 1 : 0 }}
                   aria-hidden
                 />
-              )}
-
-              <div className="flex flex-col gap-4 z-10">
-                <p
-                  className={`font-semibold text-[13px] leading-[110%] uppercase ${
-                    plan.id === 2 ? 'text-white' : 'text-primary-dark'
-                  }`}
-                >
-                  {plan.name}
-                </p>
-
-                <div className="flex items-end gap-4">
-                  <p
-                    className={`font-semibold text-[48px] leading-[100%] tracking-[-0.05em] capitalize ${
-                      plan.id === 2 ? 'text-white' : 'text-primary-dark'
-                    }`}
-                  >
-                    {plan.price}
-                  </p>
-
-                  <p
-                    className={`font-[Inter] font-normal text-[14.89px] leading-[130%] tracking-[-0.005em] ${
-                      plan.id === 2 ? 'text-[#FFFFFFB8]' : 'text-primary-dark'
-                    }`}
-                  >
-                    {plan.cadence}
-                  </p>
-                </div>
-                <p
-                  className={`font-normal text-[15px] leading-[130%] tracking-[0] ${
-                    plan.id === 2 ? 'text-white' : 'text-primary-dark'
-                  }`}
-                >
-                  {plan.description}
-                </p>
-              </div>
-
-              {plan.id === 2 ? (
-                <div className="border border-white"></div>
-              ) : (
-                <div className="border border-[#15162F26]"></div>
-              )}
-
-              <div className="flex flex-col gap-3 z-10">
-                <p
-                  className={`text-[15px] leading-[130%] tracking-[0] ${
-                    plan.id === 2 ? 'text-white' : 'text-primary-dark'
-                  }`}
-                >
-                  What’s Included:
-                </p>
-
-                <div>
-                  <ul className="flex flex-col gap-3">
-                    {plan.features.map((f, idx) => (
-                      <li key={idx} className="flex gap-4 items-start">
-                        <div
-                          className={`w-[20px] h-[20px] rounded-full flex items-center justify-center ${
-                            f.included
-                              ? plan.id === 2
-                                ? 'bg-white'
-                                : 'bg-[#0046FF]'
-                              : 'bg-[#FF0000]'
-                          }`}
-                        >
-                          <Image
-                            src={
-                              f.included
-                                ? plan.id === 2
-                                  ? '/home/pricing/check-mark-primary.png'
-                                  : '/home/pricing/check-mark.png'
-                                : '/home/pricing/cancel.png'
-                            }
-                            alt={f.included ? 'Check' : 'Cancel'}
-                            width={f.included ? 9 : 8}
-                            height={f.included ? 8 : 8}
-                          />
-                        </div>
-
-                        <p
-                          className={`font-medium italic text-[13.96px] leading-[130%] tracking-[-0.005em] ${
-                            plan.id === 2 ? 'text-white' : 'text-primary-dark'
-                          }`}
-                        >
-                          {f.label}
-                        </p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              <div className="mt-auto z-10">
-                <PrimaryButton
-                  text="Let’s Get Started"
-                  variant={plan.id === 2 ? 'default' : 'border'}
-                  className="mx-auto"
+                <div
+                  className="absolute rounded-[12px] inset-0 z-[5] pointer-events-none overflow-hidden transition-opacity duration-300"
+                  style={{ backgroundColor: 'rgba(0,70,255,0.62)', opacity: isActive ? 1 : 0 }}
+                  aria-hidden
                 />
+
+                <div className="flex flex-col gap-4 z-10">
+                  <p
+                    className={`font-semibold text-[13px] leading-[110%] uppercase ${
+                      isActive ? 'text-white' : 'text-primary-dark'
+                    }`}
+                  >
+                    {plan.name}
+                  </p>
+
+                  <div className="flex items-end gap-4">
+                    <p
+                      className={`font-semibold text-[48px] leading-[100%] tracking-[-0.05em] capitalize ${
+                        isActive ? 'text-white' : 'text-primary-dark'
+                      }`}
+                    >
+                      {plan.price}
+                    </p>
+
+                    <p
+                      className={`font-[Inter] font-normal text-[14.89px] leading-[130%] tracking-[-0.005em] ${
+                        isActive ? 'text-[#FFFFFFB8]' : 'text-primary-dark'
+                      }`}
+                    >
+                      {plan.cadence}
+                    </p>
+                  </div>
+                  <p
+                    className={`font-normal text-[15px] leading-[130%] tracking-[0] ${
+                      isActive ? 'text-white' : 'text-primary-dark'
+                    }`}
+                  >
+                    {plan.description}
+                  </p>
+                </div>
+
+                <div
+                  className={`${isActive ? 'border border-white' : 'border border-[#15162F26]'}`}
+                />
+
+                <div className="flex flex-col gap-3 z-10">
+                  <p
+                    className={`text-[15px] leading-[130%] tracking-[0] ${
+                      isActive ? 'text-white' : 'text-primary-dark'
+                    }`}
+                  >
+                    What’s Included:
+                  </p>
+
+                  <div>
+                    <ul className="flex flex-col gap-3">
+                      {plan.features.map((f, idx) => (
+                        <li key={idx} className="flex gap-4 items-start">
+                          <div
+                            className={`w-[20px] h-[20px] rounded-full flex items-center justify-center ${
+                              f.included ? (isActive ? 'bg-white' : 'bg-[#0046FF]') : 'bg-[#FF0000]'
+                            }`}
+                          >
+                            <Image
+                              src={
+                                f.included
+                                  ? isActive
+                                    ? '/home/pricing/check-mark-primary.png'
+                                    : '/home/pricing/check-mark.png'
+                                  : '/home/pricing/cancel.png'
+                              }
+                              alt={f.included ? 'Check' : 'Cancel'}
+                              width={f.included ? 9 : 8}
+                              height={f.included ? 8 : 8}
+                            />
+                          </div>
+
+                          <p
+                            className={`font-medium italic text-[13.96px] leading-[130%] tracking-[-0.005em] ${
+                              isActive ? 'text-white' : 'text-primary-dark'
+                            }`}
+                          >
+                            {f.label}
+                          </p>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="mt-auto z-10">
+                  <PrimaryButton
+                    text="Get Started"
+                    variant={isActive ? 'default' : 'border'}
+                    className="mx-auto"
+                    href='/contact'
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       </Container>
     </section>

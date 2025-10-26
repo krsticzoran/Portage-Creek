@@ -1,6 +1,7 @@
 import Container from './container'
 import Image from 'next/image'
 import Link from 'next/link'
+import headerLinks from '@/data/headerLinks'
 
 export default function Footer() {
   return (
@@ -78,21 +79,15 @@ export default function Footer() {
             <div className="flex flex-col gap-[37px]">
               <p className="font-medium text-[24px] leading-[100%] tracking-[0]">Quick Links</p>
               <div className="flex flex-col gap-[18px]">
-                <Link href="/" className="text-base leading-[16px] tracking-[0]">
-                  Home
-                </Link>
-                <Link href={'/about'} className="text-base leading-[16px] tracking-[0]">
-                  About
-                </Link>
-                <Link href={'/solutions'} className="text-base leading-[16px] tracking-[0]">
-                  Solutions
-                </Link>
-                <Link href={'/portfolio'} className="text-base leading-[16px] tracking-[0]">
-                  Portfolio
-                </Link>
-                <Link href={'/testimonials'} className="text-base leading-[16px] tracking-[0]">
-                  Testimonials
-                </Link>
+                {headerLinks.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="text-base leading-[16px] tracking-[0]"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
               </div>
             </div>
 
@@ -114,7 +109,7 @@ export default function Footer() {
             <div className="flex flex-col gap-[37px]">
               <p className="font-medium text-[24px] leading-[100%] tracking-[0]">Get in touch</p>
               <div className="flex flex-col gap-[18px]">
-                 <a
+                <a
                   href={'tel:+14165550142'}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -132,9 +127,9 @@ export default function Footer() {
                   aria-label="Email Portage Creek at hello@portagecreek.com"
                 >
                   <Image src="/footer/message.png" alt="Email icon" width={24} height={24} />
-                  <span>Toronto, Canada</span>
+                  <span>hello@portagecreek.com</span>
                 </a>
-               
+
                 <a
                   href={'https://maps.google.com?q=Toronto'}
                   target="_blank"
