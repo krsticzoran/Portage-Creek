@@ -16,8 +16,8 @@ const cards = [
     description:
       "Your website will look flawless on phones, tablets, and desktops. We ensure a seamless, responsive experience so your visitors always see your brand at its best.",
     icon: "/home/what-we-do/icon2.png",
-    width: 39,
-    height: 39,
+    width: 42,
+    height: 42,
     variant: "plain",
   },
   {
@@ -36,8 +36,8 @@ const cards = [
     description:
       "We implement on-page SEO strategies that help you rank higher in your local and academic markets. From meta tags to structure.",
     icon: "/home/what-we-do/icon4.png",
-    width: 39,
-    height: 39,
+    width: 42,
+    height: 42,
     variant: "plain",
   },
   {
