@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Header from "../components/layout/Header";
+import Footer from "../components/layout/footer";
 
 const switzer = localFont({
   src: [
@@ -43,6 +44,7 @@ export default function RootLayout({ children }) {
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
