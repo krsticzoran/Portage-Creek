@@ -5,7 +5,7 @@ import PrimaryButton from "../ui/PrimaryButton"
 export default function YourVision() {
   return (
     <section
-      className="relative py-[120px]"
+      className="relative py-[120px] overflow-hidden"
       style={{
         backgroundColor: '#F0F6FB',
         backgroundImage: "url('/home/your-vision/bg-lines.png'), url('/home/your-vision/bg.png')",

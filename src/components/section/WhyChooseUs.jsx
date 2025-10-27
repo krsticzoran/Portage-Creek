@@ -6,7 +6,7 @@ import PrimaryButton from '../ui/PrimaryButton'
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-[120px]">
+    <section className="py-[120px] overflow-hidden">
       <Container className="flex gap-[98px] h-full">
         <div className="relative w-1/2  overflow-hidden rounded-[12px]">
           <Image

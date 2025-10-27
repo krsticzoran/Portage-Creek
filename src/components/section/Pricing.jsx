@@ -20,7 +20,7 @@ export default function Pricing() {
   const accentBg = '/home/hero/background.webp'
 
   return (
-    <section className="py-[120px] bg-[#F3F3F3]">
+    <section className="py-[120px] bg-[#F3F3F3] overflow-hidden">
       <Container className="flex flex-col gap-[72px]">
         <div className="flex flex-col items-center gap-[26px]">
           <Badge>Pricing</Badge>

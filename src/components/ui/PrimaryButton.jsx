@@ -11,7 +11,7 @@ export default function PrimaryButton({
   size,
 }) {
   const base =
-    'inline-flex items-center gap-[10.11px] rounded-[42.45px] px-[24.25px] py-[14.15px] text-[15.16px] leading-[120%] capitalize transition-colors duration-300'
+    'inline-flex items-center gap-[10.11px] rounded-[42.45px] px-[24.25px] py-[14.15px] text-sm xs:text-[15.16px] leading-[120%] capitalize transition-colors duration-300'
 
   const variants = {
     default: `${base} bg-white text-primary-dark group-hover:bg-primary-dark group-hover:text-white`,

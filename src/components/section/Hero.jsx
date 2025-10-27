@@ -3,26 +3,28 @@ import Container from '../layout/container'
 import Badge from '../ui/Badge'
 import PrimaryButton from '../ui/PrimaryButton'
 import SecondaryButton from '../ui/SecondaryButton'
+import HeroImageMarquee from '../ui/HeroImageMarquee'
 
 export default function Hero() {
   return (
-    <section className="h-[920px] relative flex items-center justify-center w-full overflow-hidden">
+    <section className="lg:h-[920px] pb-[70px] lg:pb-0 relative flex items-center justify-center w-full overflow-hidden ">
       {/* Background image */}
       <div
         className="absolute inset-0 -z-10 bg-cover bg-center"
         style={{ backgroundImage: "url('/home/hero/background.webp')" }}
         aria-hidden
       />
-      <Container className="flex items-center justify-between h-full">
-        <div className="mt-[104px] h-full flex items-center">
-          <div className="max-w-[532px]  flex flex-col text-white gap-[92px]">
-            <div className="flex flex-col gap-[26px]">
+       <div className="absolute -z-5 inset-0 bg-[#0046FF80]"></div>
+      <Container className="flex flex-col lg:flex-row items-center justify-between h-full !px-0">
+        <div className="mt-[134px] lg:mt-[104px] mb-[42px] lg:mb-0 h-full flex items-center px-[35] xl:px-0">
+          <div className="max-w-[532px]  flex flex-col text-white gap-10 lg:gap-[92px]">
+            <div className="flex flex-col gap-5 lg:gap-[26px]">
               <Badge dot>Available For Project</Badge>
-              <h1 className="font-semibold text-[64px] leading-[110%]">
+              <h1 className="font-semibold text-[38px] sm:text-[64px] leading-[110%]">
                 Custom Websites Built for Speed & Precision.
               </h1>
-              <p className="font-medium text-[32px] leading-[110%]">CUSTOM DESIGN. CUSTOM CODE.</p>
-              <p className="font-normal text-[18px] leading-[140%]">
+              <p className="font-medium text-xl sm:text-[32px] leading-[110%]">CUSTOM DESIGN. CUSTOM CODE.</p>
+              <p className="sm:text-lg leading-[140%]">
                 We design and develop fast, responsive, and handcrafted websites that help Canadian
                 small businesses and academics grow with confidence.
               </p>
@@ -32,8 +34,8 @@ export default function Hero() {
                 <SecondaryButton text="About us" href="/about-us" />
               </div>
             </div>
-            <div className="flex items-center gap-4 h-[47px]">
-              <div className="relative w-full  sm:max-w-[132px] aspect-[132/47]  overflow-hidden">
+            <div className="flex items-center gap-[11px] sm:gap-4 h-[34px] sm:h-[47px]">
+              <div className="relative w-full max-w-[113px]  sm:max-w-[132px] aspect-[132/47]  overflow-hidden">
                 <Image
                   src="/home/hero/customers.png"
                   fill
@@ -52,14 +54,30 @@ export default function Hero() {
                     ))}
                   </div>
                   {/* Rating */}
-                  <span className="text-sm leading-[16px]">4.9/5.0</span>
+                  <span className="text-[12px] sm:text-sm leading-[11.3px] sm:leading-[16px]">4.9/5.0</span>
                 </div>
-                <h6 className="text-sm leading-[16px]">Trusted by 10,840 Designers</h6>
+                <h6 className="text-[12px] sm:text-sm leading-[11.3px] sm:leading-[16px]">Trusted by 10,840 Designers</h6>
               </div>
             </div>
           </div>
         </div>
-        <div className="relative w-[616px] flex  items-end justify-center gap-4">
+
+        {/* mobile marquee (hidden on lg+) */}
+        <HeroImageMarquee
+          images={[
+            '/home/hero/hero1.webp',
+            '/home/hero/hero2.webp',
+            '/home/hero/hero3.webp',
+            '/home/hero/hero4.webp',
+            '/home/hero/hero5.webp',
+            '/home/hero/hero6.webp',
+            '/home/hero/hero8.webp',
+            
+          ]}
+          duration={30}
+        />
+
+        <div className="hidden lg:flex relative w-[616px]   items-end justify-center gap-4">
           <div className="absolute top-0 left-0 h-[69px] w-[616px] bg-gradient-to-b from-[#000818] to-transparent pointer-events-none z-10"></div>
 
           <div className="absolute bottom-0 left-0 w-[616px] h-[69px] bg-gradient-to-b from-transparent to-[#001F75] pointer-events-none z-10"></div>

@@ -6,7 +6,7 @@ import headerLinks from '@/data/headerLinks'
 
 export default function Footer() {
   return (
-    <footer className="pt-[120px] pb-9 ">
+    <footer className="pt-[120px] pb-9 w-full overflow-hidden">
       <Container className="flex flex-col gap-[96px]">
         <div className="flex justify-between">
           <div className="flex flex-col gap-[26px] max-w-[392px]">

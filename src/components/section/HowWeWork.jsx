@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 export default function HowWeWork() {
   return (
-    <section className="bg-[#F3F3F3] py-[120px]">
+    <section className="bg-[#F3F3F3] py-[120px] overflow-hidden">
       <Container className="flex flex-col gap-[72px]">
         <div className="flex flex-col items-center gap-8">
           <div className="flex flex-col gap-[26px] items-center">

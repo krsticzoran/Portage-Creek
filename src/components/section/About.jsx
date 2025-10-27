@@ -6,7 +6,7 @@ import aboutCards from '../../data/aboutCards'
 
 export default function About() {
   return (
-    <section className="py-[120px] ">
+    <section className="py-[120px] overflow-hidden">
       <Container className="flex flex-col gap-[72px]">
         <div className="flex justify-between items-center">
           <div className="flex flex-col gap-8">
