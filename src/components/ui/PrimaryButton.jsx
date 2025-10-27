@@ -1,33 +1,50 @@
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
-import Image from "next/image";
+import Link from 'next/link'
+import { ArrowRight } from 'lucide-react'
+import Image from 'next/image'
 
-export default function PrimaryButton({ text = "Get Started", href = "#", variant = "default", className = "", icon=false }) {
-  const base = "inline-flex items-center gap-[10.11px] rounded-[42.45px] px-[24.25px] py-[14.15px] text-[15.16px] leading-[120%] capitalize transition-colors duration-300";
+export default function PrimaryButton({
+  text = 'Get Started',
+  href = '#',
+  variant = 'default',
+  className = '',
+  icon = false,
+  size,
+}) {
+  const base =
+    'inline-flex items-center gap-[10.11px] rounded-[42.45px] px-[24.25px] py-[14.15px] text-[15.16px] leading-[120%] capitalize transition-colors duration-300'
 
   const variants = {
     default: `${base} bg-white text-primary-dark group-hover:bg-primary-dark group-hover:text-white`,
     blue: `${base} bg-primary-blue text-white group-hover:bg-primary-dark group-hover:text-white`,
     border: `${base} bg-white text-primary-dark border border-primary-dark group-hover:bg-primary-dark group-hover:text-white`,
-  };
+  }
 
-  const outer = `flex group cursor-pointer ${className}`;
+  const outer = `flex group cursor-pointer ${className}`
   const circleClass =
-    variant === "blue"
-      ? "bg-primary-blue text-white group-hover:bg-primary-dark"
-      : variant === "border"
-      ? "bg-white text-primary-dark border border-primary-dark group-hover:bg-primary-dark group-hover:text-white"
-      : "bg-white text-primary-dark group-hover:bg-primary-dark group-hover:text-white";
+    variant === 'blue'
+      ? 'bg-primary-blue text-white group-hover:bg-primary-dark'
+      : variant === 'border'
+      ? 'bg-white text-primary-dark border border-primary-dark group-hover:bg-primary-dark group-hover:text-white'
+      : 'bg-white text-primary-dark group-hover:bg-primary-dark group-hover:text-white'
+  const linkSizeClass = size === 'big' ? 'w-[254px] justify-center' : ''
 
   return (
     <div className={outer}>
-      <Link href={href} className={`${variants[variant] ?? variants.default} flex items-center gap-4`}>
-       {icon && <Image src="/call-icon.png" width={18.55} height={12.98} alt="Call Icon" />} <p>{text}</p>
+      <Link
+        href={href}
+        className={`${
+          variants[variant] ?? variants.default
+        } flex items-center gap-4 ${linkSizeClass}`}
+      >
+        {icon && <Image src="/call-icon.png" width={18.55} height={12.98} alt="Call Icon" />}{' '}
+        <p>{text}</p>
       </Link>
 
-      <div className={`rounded-full h-[46.49px] w-[46.49px] inline-flex items-center justify-center transition-colors duration-300 ${circleClass}`}>
+      <div
+        className={`rounded-full h-[46.49px] w-[46.49px] inline-flex items-center justify-center transition-colors duration-300 ${circleClass}`}
+      >
         <ArrowRight className="w-[18px] h-[22px] scale-x-125 transition-colors duration-300 group-hover:text-white -rotate-45" />
       </div>
     </div>
-  );
+  )
 }

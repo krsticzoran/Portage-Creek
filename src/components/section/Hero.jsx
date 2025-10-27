@@ -6,7 +6,7 @@ import SecondaryButton from '../ui/SecondaryButton'
 
 export default function Hero() {
   return (
-    <section className="h-[920px] relative flex items-center justify-center">
+    <section className="h-[920px] relative flex items-center justify-center w-full overflow-hidden">
       {/* Background image */}
       <div
         className="absolute inset-0 -z-10 bg-cover bg-center"

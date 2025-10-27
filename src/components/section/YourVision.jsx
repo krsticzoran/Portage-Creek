@@ -1,7 +1,6 @@
 import Container from "../layout/container"
 import Badge from "../ui/Badge"
 import PrimaryButton from "../ui/PrimaryButton"
-import SecondaryButton from "../ui/SecondaryButton"
 
 export default function YourVision() {
   return (
@@ -21,8 +20,7 @@ export default function YourVision() {
           <h2 className="font-semibold text-[64px] leading-[110%] tracking-[0] text-center">Let’s Create a High-Performance Website Together</h2>
           <p className=" text-base leading-[140%] tracking-[0] text-center">Whether you’re launching a new business or upgrading an existing brand, we design and develop websites that perform beautifully and deliver real results. Let’s turn your idea into a digital experience that stands out.</p>
           <div className="flex gap-4">
-            <PrimaryButton text="Get Started" href="#" />
-            <SecondaryButton text="Contact Us" href="#" />
+            <PrimaryButton text="Get Started" href="/contact" />
           </div>
         </Container>
     </section>

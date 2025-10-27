@@ -1,5 +1,6 @@
 import Container from './container'
 import Image from 'next/image'
+import SocialIcons from './SocialIcons'
 import Link from 'next/link'
 import headerLinks from '@/data/headerLinks'
 
@@ -20,60 +21,7 @@ export default function Footer() {
               Building high-performance, custom websites for small businesses and academics across
               Canada.
             </p>
-            <div className="flex gap-5">
-              <a
-                href="https://twitter.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Portage Creek on X / Twitter"
-              >
-                <Image
-                  src="/footer/icon1.png"
-                  alt="X / Twitter - Portage Creek"
-                  width={20}
-                  height={20}
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Portage Creek on LinkedIn"
-              >
-                <Image
-                  src="/footer/icon2.png"
-                  alt="LinkedIn - Portage Creek"
-                  width={20}
-                  height={20}
-                />
-              </a>
-              <a
-                href="https://example.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Portage Creek website"
-              >
-                <Image
-                  src="/footer/icon3.png"
-                  alt="Website - Portage Creek"
-                  width={20}
-                  height={20}
-                />
-              </a>
-              <a
-                href="https://www.instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Visit Portage Creek on Instagram"
-              >
-                <Image
-                  src="/footer/icon4.png"
-                  alt="Instagram - Portage Creek"
-                  width={20}
-                  height={20}
-                />
-              </a>
-            </div>
+            <SocialIcons className="flex gap-5" size={20} />
           </div>
           <nav aria-label="Footer navigation" className="flex gap-[64px]">
             <div className="flex flex-col gap-[37px]">
