@@ -14,9 +14,9 @@
   --color-muted-100: #F3F3F3;
   --color-soft-blue-100: #F0F4FF;
   --color-muted-gray: #666666;
-   --breakpoint-xl: 1380px;
-    --breakpoint-lg: 1200px;
-    --breakpoint-xs: 370px;
+  --breakpoint-xl: 1380px;
+  --breakpoint-lg: 1200px;
+  --breakpoint-xs: 370px;
 }
 
 @theme inline {

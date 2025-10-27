@@ -21,19 +21,19 @@ export default function WhatWeDo() {
   const accentBgImage = cards.find((c) => c.variant === 'accent')?.bgImage || ''
 
   return (
-    <section className="py-[120px] bg-[#F3F3F3] overflow-hidden">
+    <section className="py-[70px] sm:py-[120px] bg-[#F3F3F3] overflow-hidden">
       <Container className="flex flex-col gap-[72px]">
-        <div className="flex flex-col items-center gap-[26px]">
+        <div className="flex flex-col items-center gap-[18px] sm:gap-[26px]">
           <Badge>What We Do Best</Badge>
-          <h2 className="max-w-[748px] text-primary-dark font-semibold text-[60px] leading-[1.1] tracking-[0em] text-center">
+          <h2 className="max-w-[748px] text-primary-dark font-semibold text-[30px] sm:text-[60px] leading-[1.1] tracking-[0em] text-center">
             Building Digital Experiences <span className="text-muted-gray">That Perform.</span>
           </h2>
-          <p className="text-center text-primary-dark max-w-[526px] text-lg leading-[1.4] tracking-[0em]">
+          <p className="text-center text-primary-dark max-w-[526px] sm:text-lg leading-[1.4] tracking-[0em]">
             Every website we build is designed to perform — fast loading, secure, accessible, and
             SEO-optimized from day one.
           </p>
         </div>
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:!grid-cols-3  gap-5">
           {cards.map((card) => {
             const isActive = active === card.id
 
@@ -69,7 +69,7 @@ export default function WhatWeDo() {
                     hoverTimeout.current = null
                   }, 120)
                 }}
-                className={`relative rounded-[18px] py-[30px] px-[26px] flex flex-col justify-between h-[514px] overflow-hidden ${
+                className={`relative rounded-[11px] p-[22px] sm:rounded-[18px] sm:py-[30px] sm:px-[26px] flex flex-col gap-[32px] justify-between sm:h-[514px] overflow-hidden ${
                   isActive ? 'text-white' : 'bg-white text-primary-dark'
                 }`}
               >
@@ -92,12 +92,13 @@ export default function WhatWeDo() {
 
                 {/* icon circle */}
                 <div
-                  className={`w-[98px] h-[98px] rounded-full flex items-center justify-center relative z-10 transition-colors duration-200 ${
+                  className={`w-[60px] h-[60px] sm:w-[98px] sm:h-[98px] rounded-full flex items-center justify-center relative z-10 transition-colors duration-200 ${
                     isActive ? 'bg-white' : 'bg-primary-dark'
                   }`}
                 >
                   <div
                     aria-hidden
+                    className='scale-[0.7] sm:scale-100'
                     style={{
                       width: card.width ? `${card.width}px` : '40px',
                       height: card.height ? `${card.height}px` : '40px',
@@ -113,11 +114,13 @@ export default function WhatWeDo() {
                   />
                 </div>
 
-                <div className="flex flex-col gap-[26px] relative z-10">
-                  <h3 className="font-semibold text-[32px] leading-[1.1] tracking-[0em]">
+                <div className="flex flex-col gap-5 sm:gap-[26px] relative z-10">
+                  <div className='flex flex-col gap-2.5 sm:gap-[26px]'>
+                  <h3 className="font-semibold text-lg sm:text-[32px] leading-[1.1] tracking-[0em]">
                     {card.title}
                   </h3>
-                  <p className="text-lg leading-[1.4] tracking-[0em]">{card.description}</p>
+                  <p className="text-[15px] sm:text-lg leading-[1.4] tracking-[0em]">{card.description}</p>
+                  </div>
                   <PrimaryButton
                     text="Get Started"
                     href={isActive ? '/contact' : '#'}
