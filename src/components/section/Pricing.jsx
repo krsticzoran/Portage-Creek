@@ -20,20 +20,20 @@ export default function Pricing() {
   const accentBg = '/home/hero/background.webp'
 
   return (
-    <section className="py-[120px] bg-[#F3F3F3] overflow-hidden">
+    <section className="py-[70px] lg:py-[120px] bg-[#F3F3F3] overflow-hidden">
       <Container className="flex flex-col gap-[72px]">
         <div className="flex flex-col items-center gap-[26px]">
           <Badge>Pricing</Badge>
-          <h2 className="max-w-[748px] text-primary-dark font-semibold text-[60px] leading-[1.1] tracking-[0em] text-center">
+          <h2 className="max-w-[748px] text-primary-dark font-semibold text-[30px] sm:text-[60px] leading-[1.1] tracking-[0em] text-center">
             Flexible Pricing for Every Stage of Growth
           </h2>
-          <p className="text-center text-primary-dark max-w-[748px] text-lg leading-[1.4] tracking-[0em]">
+          <p className="text-center text-primary-dark max-w-[748px] sm:text-lg leading-[1.4] tracking-[0em]">
             Whether you’re launching your first website or need ongoing support, our plans are built
             to fit your goals. No hidden fees, no confusing tiers — just clear value and dependable
             results.
           </p>
         </div>
-        <div className="flex gap-5 h-full">
+        <div className="flex flex-col lg:flex-row gap-5 h-full">
           {plans.map((plan) => {
             const isActive = active === plan.id
 
@@ -68,7 +68,7 @@ export default function Pricing() {
                     hoverTimeout.current = null
                   }, 120)
                 }}
-                className={`relative w-1/3 rounded-[12px] flex flex-col gap-[24px] px-6 py-8 overflow-hidden ${
+                className={`relative lg:w-1/3 rounded-[12px] flex flex-col gap-[24px] px-6 py-8 overflow-hidden ${
                   isActive ? 'text-white' : 'bg-white text-primary-dark'
                 }`}
               >
@@ -86,7 +86,7 @@ export default function Pricing() {
 
                 <div className="flex flex-col gap-4 z-10">
                   <p
-                    className={`font-semibold text-[13px] leading-[110%] uppercase ${
+                    className={`font-semibold text-[12px] sm:text-[13px] leading-[110%] uppercase ${
                       isActive ? 'text-white' : 'text-primary-dark'
                     }`}
                   >
@@ -95,7 +95,7 @@ export default function Pricing() {
 
                   <div className="flex items-end gap-4">
                     <p
-                      className={`font-semibold text-[48px] leading-[100%] tracking-[-0.05em] capitalize ${
+                      className={`font-semibold text-[64px] sm:text-[48px] leading-[100%] tracking-[-0.05em] capitalize ${
                         isActive ? 'text-white' : 'text-primary-dark'
                       }`}
                     >
@@ -103,7 +103,7 @@ export default function Pricing() {
                     </p>
 
                     <p
-                      className={`font-[Inter] font-normal text-[14.89px] leading-[130%] tracking-[-0.005em] ${
+                      className={`font-[Inter] font-normal text-[12px] sm:text-[14.89px] leading-[130%] tracking-[-0.005em] ${
                         isActive ? 'text-[#FFFFFFB8]' : 'text-primary-dark'
                       }`}
                     >
@@ -137,7 +137,7 @@ export default function Pricing() {
                       {plan.features.map((f, idx) => (
                         <li key={idx} className="flex gap-4 items-start">
                           <div
-                            className={`w-[20px] h-[20px] rounded-full flex items-center justify-center ${
+                            className={`w-[17.5px] h-[17.5px] sm:w-[20px] sm:h-[20px] rounded-full flex items-center justify-center ${
                               f.included ? (isActive ? 'bg-white' : 'bg-[#0046FF]') : 'bg-[#FF0000]'
                             }`}
                           >
