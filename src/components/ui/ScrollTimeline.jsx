@@ -38,7 +38,7 @@ export default function ScrollTimeline() {
    <>
       <div
       ref={timelineRef}
-        className="absolute top-0 bottom-0 left-1/2 w-[1px]"
+        className="absolute top-0 bottom-0 left-0 lg:left-1/2 w-[1px]"
         style={{
           background:
             'linear-gradient(180deg, #C4C4C4 0%, #CCCCCC 50%, rgba(204, 204, 204, 0.3) 85%, rgba(204, 204, 204, 0) 100%)',
@@ -48,7 +48,7 @@ export default function ScrollTimeline() {
 
       {/* Blue progress line (grows with scroll) */}
       <div
-        className="absolute top-0 left-1/2 w-[1px] bg-[#0046FF] transition-all duration-100 ease-out"
+        className="absolute top-0 left-0 lg:left-1/2 w-[1px] bg-[#0046FF] transition-all duration-100 ease-out"
         style={{
           height: `${scrollProgress * 100}%`,
           transform: 'translateX(-50%)',
@@ -57,7 +57,7 @@ export default function ScrollTimeline() {
 
       {/* Pointer image (moves with scroll)  */}
       <div
-        className="absolute left-1/2 transition-all duration-100 ease-out z-10"
+        className="absolute left-0 lg:left-1/2 transition-all duration-100 ease-out z-10"
         style={{
           top: `${scrollProgress * 100}%`,
           transform: 'translate(-50%, -50%)',
