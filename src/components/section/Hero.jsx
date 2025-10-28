@@ -3,7 +3,7 @@ import Container from '../layout/container'
 import Badge from '../ui/Badge'
 import PrimaryButton from '../ui/PrimaryButton'
 import SecondaryButton from '../ui/SecondaryButton'
-import HeroImageMarquee from '../ui/HeroImageMarquee'
+import DynamicHeroMarquee from '../ui/DynamicHeroMarquee'
 
 export default function Hero() {
   return (
@@ -41,6 +41,7 @@ export default function Hero() {
                   fill
                   alt="Customers"
                   className="object-contain scale-125"
+                  priority
                 />
               </div>
               <div className="font-medium text-base leading-[16px] tracking-[0]">
@@ -63,7 +64,7 @@ export default function Hero() {
         </div>
 
         {/* mobile marquee (hidden on lg+) */}
-        <HeroImageMarquee
+        <DynamicHeroMarquee
           images={[
             '/home/hero/hero1.webp',
             '/home/hero/hero2.webp',
