@@ -43,6 +43,8 @@ export default function HowWeWork() {
                 alt="Discover & Plan"
                 width={423}
                 height={289}
+                 sizes="(max-width: 1200px) calc(100vw - 70px), 650px"
+                 loading="lazy"
               />
             </div>
           </div>
@@ -53,6 +55,8 @@ export default function HowWeWork() {
                 alt="Discover & Plan"
                 width={443}
                 height={359}
+                 sizes="(max-width: 1200px) calc(100vw - 70px), 650px"
+                 loading="lazy"
               />
             </div>
             <div className="max-w-[462px] lg:w-[45%] flex flex-col gap-6 mt-8 lg:mt-0 bg-white p-3 lg:bg-transparent p-0 rounded-[9.3px]">
@@ -90,6 +94,8 @@ export default function HowWeWork() {
                 alt="Discover & Plan"
                 width={380}
                 height={288}
+                 sizes="(max-width: 1200px) calc(100vw - 70px), 650px"
+                 loading="lazy"
               />
             </div>
           </div>

@@ -152,6 +152,7 @@ export default function Pricing() {
                               alt={f.included ? 'Check' : 'Cancel'}
                               width={f.included ? 9 : 8}
                               height={f.included ? 8 : 8}
+                              loading="lazy"
                             />
                           </div>
 
@@ -173,7 +174,7 @@ export default function Pricing() {
                     text="Get Started"
                     variant={isActive ? 'default' : 'border'}
                     className="mx-auto"
-                    href='/contact'
+                    href="/contact"
                   />
                 </div>
               </div>

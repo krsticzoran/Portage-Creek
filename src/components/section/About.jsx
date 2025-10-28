@@ -3,6 +3,7 @@ import Badge from '../ui/Badge'
 import PrimaryButton from '../ui/PrimaryButton'
 import SecondaryButton from '../ui/SecondaryButton'
 import aboutCards from '../../data/aboutCards'
+import Image from 'next/image'
 
 export default function About() {
   return (
@@ -23,16 +24,22 @@ export default function About() {
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <PrimaryButton text="Schedule A Call" href="/contact" variant="blue" icon={true} />
-              <SecondaryButton text="Explore Subscription" href="/pricing" variant="outline" className='w-fit'/>
+              <SecondaryButton
+                text="Explore Subscription"
+                href="/pricing"
+                variant="outline"
+                className="w-fit"
+              />
             </div>
           </div>
-          <div className="">
-            <img
-              src="home/about/performance.webp"
+          <div>
+            <Image
+              src="/home/about/performance.webp"
               alt="About Portage Creek"
               width={670}
               height={492}
-             
+              sizes="(max-width: 1200px) calc(100vw - 70px), 650px"
+              loading="lazy"
             />
           </div>
         </div>
@@ -42,23 +49,25 @@ export default function About() {
               key={card.id}
               className="bg-white shadow-[0px_4px_4px_0px_#00000014] rounded-[13px] h-[170px] sm:h-[210px] p-7 sm:p-8 flex flex-col justify-between"
             >
-                <div>
-              <div className="flex justify-between">
-                <p className="font-semibold text-[30px] sm:text-[52px] leading-[110%] tracking-[0]">
-                  {card.value}
-                </p>
-                <div className="flex gap-[6.9px] justify-center items-center">
-                  {Array.from({ length: 3 }).map((_, i) => (
-                    <div
-                      key={i}
-                      className={`${
-                        i === card.id - 1 ? 'bg-primary-blue' : 'bg-[#F0F4FF]'
-                      } h-[10.2px] w-[10.2px] rounded-full`}
-                    />
-                  ))}
+              <div>
+                <div className="flex justify-between">
+                  <p className="font-semibold text-[30px] sm:text-[52px] leading-[110%] tracking-[0]">
+                    {card.value}
+                  </p>
+                  <div className="flex gap-[6.9px] justify-center items-center">
+                    {Array.from({ length: 3 }).map((_, i) => (
+                      <div
+                        key={i}
+                        className={`${
+                          i === card.id - 1 ? 'bg-primary-blue' : 'bg-[#F0F4FF]'
+                        } h-[10.2px] w-[10.2px] rounded-full`}
+                      />
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <p className="font-semibold text-[15px] leading-[120%] tracking-[0]">{card.subheading}</p>
+                <p className="font-semibold text-[15px] leading-[120%] tracking-[0]">
+                  {card.subheading}
+                </p>
               </div>
               <p className="font-medium text-[15px] leading-[140%] tracking-[0]">
                 {card.description}

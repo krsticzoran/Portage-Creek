@@ -57,7 +57,7 @@ export default function Hero() {
                   {/* Rating */}
                   <span className="text-[12px] sm:text-sm leading-[11.3px] sm:leading-[16px]">4.9/5.0</span>
                 </div>
-                <h6 className="text-[12px] sm:text-sm leading-[11.3px] sm:leading-[16px]">Trusted by 10,840 Designers</h6>
+                <p className="text-[12px] sm:text-sm leading-[11.3px] sm:leading-[16px]">Trusted by 10,840 Designers</p>
               </div>
             </div>
           </div>

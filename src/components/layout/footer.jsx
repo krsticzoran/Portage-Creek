@@ -15,6 +15,7 @@ export default function Footer() {
               alt="Portage Creek Web Designs"
               width={254}
               height={70}
+              loading='lazy'
               className="object-contain w-[219px] sm:w-[254px] h-auto"
               
             />
@@ -65,7 +66,7 @@ export default function Footer() {
                   className="text-[15px] sm:text-base leading-[16px] tracking-[0] flex gap-[14px] items-center"
                   aria-label="Call Portage Creek at +1 (416) 555-0142"
                 >
-                  <Image src="/footer/call.png" alt="Phone icon" width={24} height={24} />
+                  <Image src="/footer/call.png" alt="Phone icon" width={24} height={24}  loading='lazy'/>
                   <span>+1 (416) 555-0142</span>
                 </a>
                 <a
@@ -75,7 +76,7 @@ export default function Footer() {
                   className="text-[15px] sm:text-base leading-[16px] tracking-[0] flex gap-[14px] items-center"
                   aria-label="Email Portage Creek at hello@portagecreek.com"
                 >
-                  <Image src="/footer/message.png" alt="Email icon" width={24} height={24} />
+                  <Image src="/footer/message.png" alt="Email icon" width={24} height={24} loading='lazy' />
                   <span>hello@portagecreek.com</span>
                 </a>
 
@@ -86,7 +87,7 @@ export default function Footer() {
                   className="text-[15px] sm:text-base leading-[16px] tracking-[0] flex gap-[14px] items-center"
                   aria-label="View Portage Creek location on Google Maps"
                 >
-                  <Image src="/footer/location.png" alt="Location icon" width={24} height={24} />
+                  <Image src="/footer/location.png" alt="Location icon" width={24} height={24} loading='lazy' />
                   <span>Toronto, Canada</span>
                 </a>
               </div>

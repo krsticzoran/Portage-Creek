@@ -26,6 +26,8 @@ export default function WhyChooseUs() {
                 fill
                 alt="Customers"
                 className="object-contain  h-[47px] w-full"
+                sizes="(max-width: 1200px) calc(100vw - 70px), 650px"
+                loading="lazy"
               />
             </div>
             <div className=" font-medium text-base leading-[16px] tracking-[0] w-full">
@@ -41,7 +43,7 @@ export default function WhyChooseUs() {
                 {/* Rating */}
                 <span className="text-[12px] sm:text-sm leading-[16px]">4.9/5.0</span>
               </div>
-              <h6 className="text-[12px] sm:text-sm leading-[16px]">1000+ Satisfied Customers</h6>
+              <p className="text-[12px] sm:text-sm leading-[16px]">1000+ Satisfied Customers</p>
             </div>
           </div>
         </div>
@@ -66,10 +68,20 @@ export default function WhyChooseUs() {
                 className="bg-[rgba(240,244,255,1)] rounded-[13px] p-[16px] flex flex-col justify-between h-[130px]"
               >
                 <div className="flex gap-4 items-center">
-                  <Image src={f.icon} alt={`Icon ${f.id}`} width={30} height={30}  style={{ 
-    filter: 'invert(18%) sepia(99%) saturate(6527%) hue-rotate(228deg) brightness(102%) contrast(108%)' 
-  }} />
-                  <h3 className="font-semibold text-lg sm:text-xl leading-[110%] tracking-[0]">{f.title}</h3>
+                  <Image
+                    src={f.icon}
+                    alt={`Icon ${f.id}`}
+                    width={30}
+                    height={30}
+                    loading="lazy"
+                    style={{
+                      filter:
+                        'invert(18%) sepia(99%) saturate(6527%) hue-rotate(228deg) brightness(102%) contrast(108%)',
+                    }}
+                  />
+                  <h3 className="font-semibold text-lg sm:text-xl leading-[110%] tracking-[0]">
+                    {f.title}
+                  </h3>
                 </div>
                 <p className="text-sm font-medium leading-[1.3]">{f.description}</p>
               </div>
