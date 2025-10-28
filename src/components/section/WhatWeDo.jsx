@@ -21,7 +21,7 @@ export default function WhatWeDo() {
   const accentBgImage = cards.find((c) => c.variant === 'accent')?.bgImage || ''
 
   return (
-    <section className="py-[70px] sm:py-[120px] bg-[#F3F3F3] overflow-hidden">
+    <section className="py-[70px] lg:py-[120px] bg-[#F3F3F3] overflow-hidden">
       <Container className="flex flex-col gap-[72px]">
         <div className="flex flex-col items-center gap-[18px] sm:gap-[26px]">
           <Badge>What We Do Best</Badge>

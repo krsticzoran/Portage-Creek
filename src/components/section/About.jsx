@@ -6,44 +6,45 @@ import aboutCards from '../../data/aboutCards'
 
 export default function About() {
   return (
-    <section className="py-[120px] overflow-hidden">
-      <Container className="flex flex-col gap-[72px]">
-        <div className="flex justify-between items-center">
-          <div className="flex flex-col gap-8">
-            <div className="flex flex-col gap-[26px]">
+    <section className="py-[70px] lg:py-[120px] overflow-hidden">
+      <Container className="flex flex-col gap-[42px] lg:gap-[72px]">
+        <div className="flex flex-col lg:flex-row gap-[42px] lg:gap-0 justify-between  items-center">
+          <div className="flex flex-col gap-[18px] sm:gap-8">
+            <div className="flex flex-col gap-[18px] sm:gap-[26px]">
               <Badge variant="filled">About Portage Creek</Badge>
-              <h2 className="max-w-[469px] text-primary-dark font-semibold text-[60px] leading-[1.1] tracking-[0em]">
+              <h2 className="max-w-[469px] text-primary-dark font-semibold text-[30px] sm:text-[60px] leading-[1.1] tracking-[0em]">
                 Where Design Meets <span className="text-muted-gray">Precision.</span>
               </h2>
             </div>
-            <p className="text-primary-dark max-w-[556px] text-lg leading-[1.4] tracking-[0em]">
+            <p className="text-primary-dark max-w-[556px] sm:text-lg leading-[1.4] tracking-[0em]">
               We’re a web development studio dedicated to bringing digital ideas to life through
               elegant code and purposeful design. Inspired by the calm yet powerful flow of a creek,
               our work embodies clarity, adaptability, and momentum.
             </p>
-            <div className="flex gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
               <PrimaryButton text="Schedule A Call" href="/contact" variant="blue" icon={true} />
-              <SecondaryButton text="Explore Subscription" href="/pricing" variant="outline" />
+              <SecondaryButton text="Explore Subscription" href="/pricing" variant="outline" className='w-fit'/>
             </div>
           </div>
-          <div>
+          <div className="">
             <img
               src="home/about/performance.webp"
               alt="About Portage Creek"
               width={670}
               height={492}
+             
             />
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-4 p-2.5 rounded-[10px] bg-[#F6F6F6]">
+        <div className="grid md:grid-cols-3 gap-2.5 sm:gap-4 p-2.5 rounded-[10px] bg-[#F6F6F6]">
           {aboutCards.map((card) => (
             <div
               key={card.id}
-              className="bg-white shadow-[0px_4px_4px_0px_#00000014] rounded-[13px] h-[210px] p-8 flex flex-col justify-between"
+              className="bg-white shadow-[0px_4px_4px_0px_#00000014] rounded-[13px] h-[170px] sm:h-[210px] p-7 sm:p-8 flex flex-col justify-between"
             >
                 <div>
               <div className="flex justify-between">
-                <p className="font-semibold text-[52px] leading-[110%] tracking-[0]">
+                <p className="font-semibold text-[30px] sm:text-[52px] leading-[110%] tracking-[0]">
                   {card.value}
                 </p>
                 <div className="flex gap-[6.9px] justify-center items-center">

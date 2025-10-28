@@ -18,7 +18,7 @@ export default function Hero() {
       <Container className="flex flex-col lg:flex-row items-center justify-between h-full !px-0">
         <div className="mt-[134px] lg:mt-[104px] mb-[42px] lg:mb-0 h-full flex items-center px-[35] xl:px-0">
           <div className="max-w-[532px]  flex flex-col text-white gap-10 lg:gap-[92px]">
-            <div className="flex flex-col gap-5 lg:gap-[26px]">
+            <div className="flex flex-col gap-5 sm:gap-[26px]">
               <Badge dot>Available For Project</Badge>
               <h1 className="font-semibold text-[38px] sm:text-[64px] leading-[110%]">
                 Custom Websites Built for Speed & Precision.
