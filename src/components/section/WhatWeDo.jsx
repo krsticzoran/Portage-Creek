@@ -21,11 +21,11 @@ export default function WhatWeDo() {
   const accentBgImage = cards.find((c) => c.variant === 'accent')?.bgImage || ''
 
   return (
-    <section className="py-[70px] lg:py-[120px] bg-[#F3F3F3] overflow-hidden">
+    <section className="py-[70px] lg:py-[120px] bg-[#F3F3F3]  overflow-hidden">
       <Container className="flex flex-col gap-[72px]">
         <div className="flex flex-col items-center gap-[18px] sm:gap-[26px]">
           <Badge>What We Do Best</Badge>
-          <h2 className="max-w-[748px] text-primary-dark font-semibold text-[30px] sm:text-[60px] leading-[1.1] tracking-[0em] text-center">
+          <h2 className="max-w-[748px] text-primary-dark  font-semibold text-[30px] sm:text-[60px] leading-[1.1] tracking-[0em] text-center">
             Building Digital Experiences <span className="text-muted-gray">That Perform.</span>
           </h2>
           <p className="text-center text-primary-dark max-w-[526px] sm:text-lg leading-[1.4] tracking-[0em]">

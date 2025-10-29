@@ -14,6 +14,7 @@ export default function SocialIcons({ className = 'flex gap-5', size = 20 } = {}
           alt="X / Twitter - Portage Creek"
           width={size}
           height={size}
+          className="filter dark:brightness-0 dark:invert"
         />
       </a>
 
@@ -23,7 +24,7 @@ export default function SocialIcons({ className = 'flex gap-5', size = 20 } = {}
         rel="noopener noreferrer"
         aria-label="Visit Portage Creek on Instagram"
       >
-        <Image src="/footer/icon1.png" alt="Instagram - Portage Creek" width={size} height={size} />
+        <Image src="/footer/icon1.png" alt="Instagram - Portage Creek" width={size} height={size} className="filter dark:brightness-0 dark:invert" />
       </a>
 
       <a
@@ -32,7 +33,7 @@ export default function SocialIcons({ className = 'flex gap-5', size = 20 } = {}
         rel="noopener noreferrer"
         aria-label="Visit Portage Creek on LinkedIn"
       >
-        <Image src="/footer/icon3.png" alt="LinkedIn - Portage Creek" width={size} height={size} />
+        <Image src="/footer/icon3.png" alt="LinkedIn - Portage Creek" width={size} height={size} className="filter dark:brightness-0 dark:invert" />
       </a>
 
       <a
@@ -41,7 +42,7 @@ export default function SocialIcons({ className = 'flex gap-5', size = 20 } = {}
   rel="noopener noreferrer"
   aria-label="Follow us on Threads"
 >
-  <Image src="/footer/icon4.png" alt="Threads - Portage Creek" width={size} height={size} />
+  <Image src="/footer/icon4.png" alt="Threads - Portage Creek" width={size} height={size} className="filter dark:brightness-0 dark:invert" />
 </a>
     </div>
   )

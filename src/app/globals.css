@@ -19,6 +19,8 @@
   --breakpoint-xs: 370px;
 }
 
+@variant dark (.dark &);
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

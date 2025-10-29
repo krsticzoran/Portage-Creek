@@ -6,7 +6,7 @@ import PrimaryButton from '../ui/PrimaryButton'
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-[70px] lg:py-[120px] overflow-hidden">
+    <section className="py-[70px] lg:py-[120px] overflow-hidden dark:bg-primary-dark  transition-colors duration-200">
       <Container className="flex flex-col-reverse lg:flex-row gap-[42px] lg:gap-[98px] h-full">
         <div className="relative w-full lg:w-1/2 min-h-[500px] overflow-hidden rounded-[12px]">
           <Image
@@ -50,10 +50,10 @@ export default function WhyChooseUs() {
         <div className="lg:w-1/2 flex flex-col gap-9">
           <div className="flex flex-col gap-[18px] sm:gap-[26px]">
             <Badge>Why Choose Portage Creek</Badge>
-            <h2 className=" text-primary-dark font-semibold text-[30px] sm:text-[60px] leading-[1.1] tracking-[0em] ">
+            <h2 className=" text-primary-dark font-semibold text-[30px] sm:text-[60px] leading-[1.1] tracking-[0em] dark:text-white transition-colors duration-200">
               A Studio That Flows With You.{' '}
             </h2>
-            <p className="text-primary-dark sm:text-lg leading-[1.4] tracking-[0em]">
+            <p className="text-primary-dark sm:text-lg leading-[1.4] tracking-[0em] dark:text-white transition-colors duration-200">
               We’re not just developers — we’re partners in your growth. From the first sketch to
               launch day and beyond, Portage Creek Web Designs focuses on clarity, speed, and
               craftsmanship that stands the test of time. Every project is guided by precision,

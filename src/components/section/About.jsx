@@ -7,17 +7,17 @@ import Image from 'next/image'
 
 export default function About() {
   return (
-    <section className="py-[70px] lg:py-[120px] overflow-hidden">
+    <section className="py-[70px] lg:py-[120px] dark:bg-primary-dark transition-colors duration-200 overflow-hidden">
       <Container className="flex flex-col gap-[42px] lg:gap-[72px]">
         <div className="flex flex-col lg:flex-row gap-[42px] lg:gap-0 justify-between  items-center">
           <div className="flex flex-col gap-[18px] sm:gap-8">
             <div className="flex flex-col gap-[18px] sm:gap-[26px]">
               <Badge variant="filled">About Portage Creek</Badge>
-              <h2 className="max-w-[469px] text-primary-dark font-semibold text-[30px] sm:text-[60px] leading-[1.1] tracking-[0em]">
+              <h2 className="max-w-[469px] text-primary-dark font-semibold text-[30px] sm:text-[60px] leading-[1.1] tracking-[0em] dark:text-white transition-colors duration-200">
                 Where Design Meets <span className="text-muted-gray">Precision.</span>
               </h2>
             </div>
-            <p className="text-primary-dark max-w-[556px] sm:text-lg leading-[1.4] tracking-[0em]">
+            <p className="text-primary-dark max-w-[556px] sm:text-lg leading-[1.4] tracking-[0em] dark:text-white transition-colors duration-200">
               We’re a web development studio dedicated to bringing digital ideas to life through
               elegant code and purposeful design. Inspired by the calm yet powerful flow of a creek,
               our work embodies clarity, adaptability, and momentum.
@@ -40,6 +40,7 @@ export default function About() {
               height={492}
               sizes="(max-width: 1200px) calc(100vw - 70px), 650px"
               loading="lazy"
+              className='rounded-[13px]'
             />
           </div>
         </div>

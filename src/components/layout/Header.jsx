@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Container from '../layout/container'
 import PrimaryButton from '../ui/PrimaryButton'
+import ThemeToggle from '@/components/ui/ThemeToggle'
 
 import headerLinks from '@/data/headerLinks'
 import MobileMenu from './MobileMenu'
@@ -49,6 +50,7 @@ export default function Header() {
 
           <div className="hidden lg:flex items-center gap-3 xl:pr-4">
             <PrimaryButton text="Get Started" href="/contact" variant="blue" />
+              <ThemeToggle />
           </div>
 
           {/* Mobile menu component */}

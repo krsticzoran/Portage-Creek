@@ -5,6 +5,7 @@ import Container from '../layout/container'
 import PrimaryButton from '../ui/PrimaryButton'
 import headerLinks from '@/data/headerLinks'
 import SocialIcons from './SocialIcons'
+import ThemeToggle from '../ui/ThemeToggle'
 
 export default function MobileMenu() {
   const [open, setOpen] = useState(false)
@@ -40,7 +41,7 @@ export default function MobileMenu() {
                     <span className="block w-[18px] h-[2px] bg-white rotate-45 transform origin-center"></span>
                     <span className="block w-[18px] h-[2px] bg-white -rotate-45 transform origin-center absolute"></span>
                   </button>
-                  <div />
+                  <ThemeToggle className="h-[50.5px]" />
                 </div>
 
                 <nav className="flex flex-col flex-1">
