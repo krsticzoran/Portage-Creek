@@ -11,15 +11,12 @@ export default function Marquee({ items = [], duration = 24, reverse = false }) 
     const container = containerRef.current
     if (!track || !container) return
 
-  
     const totalWidth = track.scrollWidth
     const shift = totalWidth / 2
 
-   
     track.style.setProperty('--shift', `${shift}px`)
     track.style.setProperty('--marquee-duration', `${duration}s`)
 
-  
     void track.offsetWidth
   }, [items, duration])
 

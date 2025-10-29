@@ -40,7 +40,7 @@ export default function About() {
               height={492}
               sizes="(max-width: 1200px) calc(100vw - 70px), 650px"
               loading="lazy"
-              className='rounded-[13px]'
+              className="rounded-[13px]"
             />
           </div>
         </div>

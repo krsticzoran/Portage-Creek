@@ -1,4 +1,3 @@
-
 import Badge from '../ui/Badge'
 import clientCards from '../../data/clientCards'
 import Marquee from '../ui/Marquee'

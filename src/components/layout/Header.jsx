@@ -50,7 +50,7 @@ export default function Header() {
 
           <div className="hidden lg:flex items-center gap-3 xl:pr-4">
             <PrimaryButton text="Get Started" href="/contact" variant="blue" />
-              <ThemeToggle />
+            <ThemeToggle />
           </div>
 
           {/* Mobile menu component */}

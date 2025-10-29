@@ -1,7 +1,7 @@
 import localFont from 'next/font/local'
 import './globals.css'
 import Header from '../components/layout/Header'
-import Footer from '../components/layout/footer'
+import Footer from '../components/layout/Footer'
 import { Providers } from './providers'
 
 const switzer = localFont({

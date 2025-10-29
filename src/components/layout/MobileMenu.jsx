@@ -62,7 +62,7 @@ export default function MobileMenu() {
                   <div className="mt-6">
                     <PrimaryButton text="Get Started" href="/contact" variant="blue" size="big" />
                   </div>
-                  <SocialIcons className="mb-6 mt-auto flex gap-5" size={20} />
+                  <SocialIcons className="mb-6 mt-auto flex gap-5" size={20} invertInDark={false} />
                 </nav>
               </Container>
             </div>

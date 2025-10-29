@@ -3,7 +3,6 @@
 import { useEffect, useRef } from 'react'
 import Image from 'next/image'
 
-
 export default function HeroImageMarquee({ images = [], duration = 28 }) {
   const trackARef = useRef(null)
   const trackBRef = useRef(null)
@@ -63,8 +62,8 @@ export default function HeroImageMarquee({ images = [], duration = 28 }) {
                 width={188}
                 height={193}
                 className="object-cover w-full h-full"
-                 loading="lazy"
-                 quality={60}
+                loading="lazy"
+                quality={60}
               />
             </div>
           ))}

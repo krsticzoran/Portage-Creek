@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic'
 
 const HeroImageMarquee = dynamic(() => import('./HeroImageMarquee'), {
   ssr: false,
-  loading: () => <div className="h-[400px] lg:hidden" />
+  loading: () => <div className="h-[400px] lg:hidden" />,
 })
 
 export default function DynamicHeroMarquee({ images, duration = 28 }) {
@@ -14,10 +14,8 @@ export default function DynamicHeroMarquee({ images, duration = 28 }) {
   useEffect(() => {
     const loadMarquee = () => {
       if ('requestIdleCallback' in window) {
-       
         requestIdleCallback(() => setShow(true), { timeout: 1000 })
       } else {
-       
         setTimeout(() => setShow(true), 300)
       }
     }

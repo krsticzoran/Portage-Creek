@@ -29,15 +29,15 @@ export default function ScrollTimeline() {
     }
 
     window.addEventListener('scroll', handleScroll)
-    handleScroll() 
+    handleScroll()
 
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
   return (
-   <>
+    <>
       <div
-      ref={timelineRef}
+        ref={timelineRef}
         className="absolute top-0 bottom-0 left-0 lg:left-1/2 w-[1px]"
         style={{
           background:
@@ -71,6 +71,6 @@ export default function ScrollTimeline() {
           className="drop-shadow-lg"
         />
       </div>
-   </>
+    </>
   )
 }

@@ -98,7 +98,7 @@ export default function WhatWeDo() {
                 >
                   <div
                     aria-hidden
-                    className='scale-[0.7] sm:scale-100'
+                    className="scale-[0.7] sm:scale-100"
                     style={{
                       width: card.width ? `${card.width}px` : '40px',
                       height: card.height ? `${card.height}px` : '40px',
@@ -115,11 +115,13 @@ export default function WhatWeDo() {
                 </div>
 
                 <div className="flex flex-col gap-5 sm:gap-[26px] relative z-10">
-                  <div className='flex flex-col gap-2.5 sm:gap-[26px]'>
-                  <h3 className="font-semibold text-lg sm:text-[32px] leading-[1.1] tracking-[0em]">
-                    {card.title}
-                  </h3>
-                  <p className="text-[15px] sm:text-lg leading-[1.4] tracking-[0em]">{card.description}</p>
+                  <div className="flex flex-col gap-2.5 sm:gap-[26px]">
+                    <h3 className="font-semibold text-lg sm:text-[32px] leading-[1.1] tracking-[0em]">
+                      {card.title}
+                    </h3>
+                    <p className="text-[15px] sm:text-lg leading-[1.4] tracking-[0em]">
+                      {card.description}
+                    </p>
                   </div>
                   <PrimaryButton
                     text="Get Started"

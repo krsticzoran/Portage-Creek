@@ -14,7 +14,7 @@ export default function Hero() {
         style={{ backgroundImage: "url('/home/hero/background.webp')" }}
         aria-hidden
       />
-       <div className="absolute -z-5 inset-0 bg-[#0046FF80]"></div>
+      <div className="absolute -z-5 inset-0 bg-[#0046FF80]"></div>
       <Container className="flex flex-col lg:flex-row items-center justify-between h-full !px-0">
         <div className="mt-[134px] lg:mt-[104px] mb-[42px] lg:mb-0 h-full flex items-center px-[35] xl:px-0">
           <div className="max-w-[532px]  flex flex-col text-white gap-10 lg:gap-[92px]">
@@ -23,7 +23,9 @@ export default function Hero() {
               <h1 className="font-semibold text-[38px] sm:text-[64px] leading-[110%]">
                 Custom Websites Built for Speed & Precision.
               </h1>
-              <p className="font-medium text-xl sm:text-[32px] leading-[110%]">CUSTOM DESIGN. CUSTOM CODE.</p>
+              <p className="font-medium text-xl sm:text-[32px] leading-[110%]">
+                CUSTOM DESIGN. CUSTOM CODE.
+              </p>
               <p className="sm:text-lg leading-[140%]">
                 We design and develop fast, responsive, and handcrafted websites that help Canadian
                 small businesses and academics grow with confidence.
@@ -55,9 +57,13 @@ export default function Hero() {
                     ))}
                   </div>
                   {/* Rating */}
-                  <span className="text-[12px] sm:text-sm leading-[11.3px] sm:leading-[16px]">4.9/5.0</span>
+                  <span className="text-[12px] sm:text-sm leading-[11.3px] sm:leading-[16px]">
+                    4.9/5.0
+                  </span>
                 </div>
-                <p className="text-[12px] sm:text-sm leading-[11.3px] sm:leading-[16px]">Trusted by 10,840 Designers</p>
+                <p className="text-[12px] sm:text-sm leading-[11.3px] sm:leading-[16px]">
+                  Trusted by 10,840 Designers
+                </p>
               </div>
             </div>
           </div>
@@ -73,7 +79,6 @@ export default function Hero() {
             '/home/hero/hero5.webp',
             '/home/hero/hero6.webp',
             '/home/hero/hero8.webp',
-            
           ]}
           duration={30}
         />
