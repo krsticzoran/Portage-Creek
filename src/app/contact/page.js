@@ -120,7 +120,7 @@ export default function ContactPage() {
                   const formEl = e.currentTarget;
                   const formData = new FormData(formEl);
 
-                  fetch("/", {
+                  fetch("/contact-form.html", {
                     method: "POST",
                     headers: {
                       "Content-Type": "application/x-www-form-urlencoded",
