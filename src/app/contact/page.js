@@ -96,7 +96,7 @@ export default function ContactPage() {
             <div className="space-y-4">
               <h2 className="text-2xl lg:text-3xl font-bold">Thank you!</h2>
               <p className="text-lg text-primary-dark/80">
-                Thank you for contacting us. We’ve received your message. For a
+                Thank you for contacting us. We've received your message. For a
                 faster response, please also give us a call if your request is
                 urgent:
                 <Link
@@ -114,16 +114,10 @@ export default function ContactPage() {
               <form
                 name="contact"
                 method="POST"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
                 onSubmit={(e) => {
                   e.preventDefault();
                   const formEl = e.currentTarget;
                   const formData = new FormData(formEl);
-
-                  // Required for Netlify AJAX submissions:
-                  // include form-name when posting
-                  formData.append("form-name", "contact");
 
                   fetch("/", {
                     method: "POST",
@@ -145,12 +139,6 @@ export default function ContactPage() {
               >
                 {/* Netlify required hidden inputs */}
                 <input type="hidden" name="form-name" value="contact" />
-                <p className="hidden">
-                  <label>
-                    Don’t fill this out if you’re human:{" "}
-                    <input name="bot-field" />
-                  </label>
-                </p>
 
                 <div>
                   <label
@@ -229,22 +217,6 @@ export default function ContactPage() {
             </>
           )}
         </div>
-      </div>
-
-          {/* Hidden static form for Netlify build-time detection */}
-          <div hidden>
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-          <input type="hidden" name="form-name" value="contact" />
-          <p hidden>
-            <label>
-              Don’t fill this out if you’re human: <input name="bot-field" />
-            </label>
-          </p>
-          <input name="name" />
-          <input name="email" />
-          <input name="phone" />
-          <textarea name="message" />
-        </form>
       </div>
     </Container>
   );
