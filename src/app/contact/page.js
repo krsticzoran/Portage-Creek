@@ -96,9 +96,9 @@ export default function ContactPage() {
             <div className="space-y-4">
               <h2 className="text-2xl lg:text-3xl font-bold">Thank you!</h2>
               <p className="text-lg text-primary-dark/80">
-                Thank you for contacting us. We've received your message. For a
-                faster response, please also give us a call if your request is
-                urgent:
+                Thank you for contacting us. We&apos;ve received your message.
+                For a faster response, please also give us a call if your
+                request is urgent:
                 <Link
                   href="tel:+14375808121"
                   className="text-primary-blue font-semibold ml-2"
